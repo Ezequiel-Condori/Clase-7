@@ -54,7 +54,7 @@ function area(base, altura){
     return res;
 }
 
-let resultadoArea=area(15, 9)
+let resultadoArea=area(15, 9)   //Números de prueba, estos del parentesis se pueden cambiar, estan para probar las variables
 console.log("Valor Area: ", resultadoArea);
 let radio=resultadoArea/2;
 let Perimetro=2*Math.PI*radio;
@@ -68,21 +68,60 @@ console.log("Perimetro es igual a:", Perimetro);
 
 //Actividad 7
 
-function suma(n1, n2){
-    let res=n1+n2;
+function sumar(n1, n2){
+    let res = n1 + n2;
     return res;
 }
 
-function resta(n1, n2){
+function restar(n1, n2){
     let res=n1-n2;
     return res;
 }
 
-function multi(n1, n2){
-    let res=n1*n2;
+function multiplicar(n1, n2){
+    let res = n1*n2;
     return res;
 }
 
-function div(n1, n2){
-    let div=n1, n2;
+function dividir(n1, n2){
+    let res = n1/n2;
+    return res;
 }
+
+function calcular(num1, num2, operacion){
+    let resultadoFinal;
+
+    if(operacion==1){ 
+        resultadoFinal=sumar(num1, num2);
+        console.log('Su calculo de SUMA dio como resultado:', resultadoFinal);
+    } 
+    else if(operacion==2){
+        resultadoFinal=restar(num1, num2);
+        console.log('Su calculo de RESTA dio como resultado:', resultadoFinal);
+    } 
+    else if(operacion==3){
+        resultadoFinal=multiplicar(num1, num2);
+        console.log('Su calculo de MULTIPLICACION dio como resultado:', resultadoFinal);
+    } 
+    else if(operacion==4){
+        resultadoFinal=dividir(num1, num2);
+        console.log('Su calculo de DIVISION dio como resultado:', resultadoFinal);
+    } 
+    else {
+        console.error('ERROR: El numero de operación no es válido. Solo se admiten valores del 1 al 4.');
+        return null; 
+    }
+
+    return resultadoFinal; 
+}
+
+console.log('Hola! Usted esta usando la calculadora de prueba de Ezequiel Jaime Condori Apaza, esperemos que tenga la mejor experiencia en este programa ;]');
+console.log('Tabla de uso de funciones sumar, restar, multiplicar y dividir:');
+console.log('suma = 1');
+console.log('resta = 2');
+console.log('multiplicacion = 3');
+console.log('division = 4');
+console.log('Recuerde que esto se tiene que aplicar al valor "operacion" de la funcion calcular');
+console.warn('SI POR ALGUN MOTIVO SE LE OCURRE PONER OTRO NUMERO QUE NO ESTE EN LA LISTA, VA A TIRAR ERROR, YA ESTA ADVERTIDO, USUARIO');
+
+let operacionDePrueba = calcular(6, 8, 3);    //Valores editables de prueba
